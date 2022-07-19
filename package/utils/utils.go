@@ -22,6 +22,10 @@ func GetDialer(clientCertFile string, clientKeyFile string, caCertFile string) *
 	}
 }
 
+// func GetSpiffeDialer(ctx context.Context) *kafka.Dialer {
+
+// }
+
 func newTLSConfig(clientCertFile, clientKeyFile, caCertFile string) (*tls.Config, error) {
 	// Load client cert
 	cert, err := tls.LoadX509KeyPair(clientCertFile, clientKeyFile)
